@@ -1,0 +1,304 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="format-detection", content="telephone=no")
+    
+    title Layot-workshop
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="./css/main.css")
+    
+    script(src="js/script.js")
+    
+  - var icons = [{icon: 'fa-rss',class: '__rss'},{icon: 'fa-twitter'},{icon: 'fa-tumblr'},{icon: 'fa-facebook'},{icon: 'fa-search'}]
+    
+  mixin icons (obj)
+    a(href="#")
+      i(class="fa "+obj.icon aria-hidden="true")
+    
+  body
+    header.header
+      .content
+        nav.header-top-line
+          ul
+            li.header-top-line--icon.header-top-line--icon__menu
+              a(href="#")
+                i(class="fa fa-bars fa-lg" aria-hidden="true")
+          figure.header-top-line--logo
+            img(src="img/header/logo.png" alt="logo")
+            span blog
+          ul
+            each icon in icons
+              li.header-top-line--icon(class="header-top-line--icon" + icon.class)
+                +icons(icon)
+        section.header-slider
+          ul
+            li.header-slider--slide
+              img(src="img/header/slider.png" alt="slide")
+              .header-slider--slide-text
+                p Latest News
+                h2 BodyBuilding best<br/>for you health
+          .header-navigation
+            ul.header-navigation--points
+              each val in [1,2,3]
+                li.header-navigation--point
+            p.header-navigation--text Featured Article
+            
+    main.main
+      .content
+          form.main-form
+            h3 Signup to <br/> Newsletter
+            input(placeholder="Your Name")
+            input(placeholder="Your Email Address")
+            button Subscribe Now
+      
+          section.main-content
+          
+            .main-content--column
+              article.main-post
+                .main-post--wrapper
+                  section.main-post--header
+                    p.main-post--info Travelling
+                    p.main-post--name Travel besT Adventure
+                    p.main-post--info.main-post--info_regular January 25, 2016
+                  section.main-post--main
+                    p Lorem ipsum doloirs sit amet, csatetur adipisicin, sed does eiusmod tehampor incididunt uts laboasre et dolhvaliqua. Ut enim  vem, nostrasuaations ullamco labiosi ut saaliquip exoi asea comoodo Disco choice is the have great work.
+                  section.main-post--read-more
+                    p Read more
+                .main-post--comments
+                  span.main-post--info.main-post--info_regular
+                    i(class="fa fa-comments-o" aria-hidden="true")
+                    | No Comment
+                  ul
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-dribbble" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-facebook" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-twitter" aria-hidden="true")
+                    li.main-post--social.main-post--social__last
+                      a(href="#")
+                        i(class="fa fa-pinterest" aria-hidden="true")
+
+              article.main-post.main-post-white
+              
+              article.main-post.main-post-background
+                .main-post--wrapper.main-post--wrapper__background
+                  section.main-post--header
+                    p.main-post--info Travelling
+                    p.main-post--name Travel besT Adventure
+                    p.main-post--info.main-post--info_regular January 25, 2016
+                  section.main-post--main
+                    p Lorem ipsum doloirs sit amet, csatetur adipisicin, sed does eiusmod tehampor incididunt uts laboasre et dolhvaliqua. Ut enim  vem, nostrasuaations ullamco labiosi ut saaliquip exoi asea comoodo tehampor incididunt uts laboasre etsa iusmod tehampor incididunt uts havlaboasre et dolhvaliqua. Ut enim  vem, choice is the have great work.
+                  section.main-post--read-more
+                    p Read more
+                    
+            .main-content--column
+            
+              article.main-post.main-post-image
+                .main-post--image
+                  img(src="img/main/img1.png" alt="img")
+                .main-post--wrapper.main-post--wrapper-before.main-post--wrapper__image
+                  section.main-post--header
+                    p.main-post--info Travelling
+                    p.main-post--name Standard Image Post
+                    p.main-post--info.main-post--info_regular January 25, 2016
+                  section.main-post--main
+                  section.main-post--read-more
+                    p Read more
+                .main-post--comments
+                  span.main-post--info.main-post--info_regular
+                    i(class="fa fa-comments-o" aria-hidden="true")
+                    | 06 Comment
+                  ul
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-dribbble" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-facebook" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-twitter" aria-hidden="true")
+                    li.main-post--social.main-post--social__last
+                      a(href="#")
+                        i(class="fa fa-pinterest" aria-hidden="true")
+                    
+              article.main-post.main-post-quote
+                .main-post--wrapper
+                  section.main-post--main.main-post--main__quote
+                    p.main-post-text__quote As per Lorm ipsum dolor sitamet, consectetur adipisicing elits, sed do Now eiusmod tempor havei ut labores et dolore magna aliqusa. Ut wenim ad minim veniam, quis its a snostrud now is the ullamco aliquip ex ea commodo.
+                  section.main-post--read-more.main-post--read-more__signature
+                    p Nathalia Alexy
+                    
+              article.main-post.main-post-video
+                .main-post--video.main-post--image
+                  img(src="img/main/video.png" alt='video')
+                .main-post--wrapper.main-post--wrapper__video
+                  section.main-post--header
+                    p.main-post--info Designer
+                    p.main-post--name Video Image Post Style
+                    p.main-post--info.main-post--info_regular January 25, 2016
+                  section.main-post--main.main-post--main__video
+                    p A CONAN staffer is learning the rules of the in  road, with a little help from Look out, fellow drivers!
+                .main-post--comments
+                  span.main-post--info.main-post--info_regular
+                    i(class="fa fa-comments-o" aria-hidden="true")
+                    | No Comment
+                  ul
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-dribbble" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-facebook" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-twitter" aria-hidden="true")
+                    li.main-post--social.main-post--social__last
+                      a(href="#")
+                        i(class="fa fa-pinterest" aria-hidden="true")
+                        
+            .main-content--column
+              article.main-post
+                .main-post--wrapper
+                  section.main-post--header
+                    p.main-post--info Travelling
+                    p.main-post--name Simple post style
+                    p.main-post--info.main-post--info_regular January 25, 2016
+                  section.main-post--main
+                    p Lorem ipsum doloirs sit amet, csatetur adipisicin, sed does eiusmod tehampor choice is the have great work.
+                  section.main-post--read-more
+                    p Read more
+                .main-post--comments
+                  span.main-post--info.main-post--info_regular
+                    i(class="fa fa-comments-o" aria-hidden="true")
+                    | No Comment
+                  ul
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-dribbble" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-facebook" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-twitter" aria-hidden="true")
+                    li.main-post--social.main-post--social__last
+                      a(href="#")
+                        i(class="fa fa-pinterest" aria-hidden="true")
+                    
+              article.main-post.main-post-image
+                .main-post--image
+                  img(src="img/main/img2.png" alt="img")
+                .main-post--wrapper.main-post--wrapper-before.main-post--wrapper-image
+                  section.main-post--header
+                    p.main-post--info Travelling
+                    p.main-post--name awesome Gallery Post
+                    p.main-post--info.main-post--info_regular January 25, 2016
+                  section.main-post--main
+                  section.main-post--read-more
+                    p Read more
+                .main-post--comments
+                  span.main-post--info.main-post--info_regular
+                    i(class="fa fa-comments-o" aria-hidden="true")
+                    | No Comment
+                  ul
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-dribbble" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-facebook" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-twitter" aria-hidden="true")
+                    li.main-post--social.main-post--social__last
+                      a(href="#")
+                        i(class="fa fa-pinterest" aria-hidden="true")
+                    
+              article.main-post.main-post-link
+                .main-post---wrapper
+                  section.main-post--main
+                    a(href="http://www.abcdomainname.com/screen/discovery") http://www.abcdomainname.com/ screen/discovery
+                    
+              article.main-post.main-post-black
+              
+            .main-content--column
+              article.main-post.main-post-white.main-post__decor
+              
+              article.main-post.main-post__decor
+                .main-post--wrapper
+                  section.main-post--header
+                    p.main-post--info Lifestyle
+                    p.main-post--name without image post
+                    p.main-post--info.main-post--info_regular January 25, 2016
+                  section.main-post--main
+                    p Lorem ipsum doloirs sit amet, csatetur adipisicin, sed does eiusmod tehampor incididunt uts laboasre et dolhvaliqua. Ut enim  vem, nostrasuaations ullamco labiosi ut saaliquip exoi asea comoodo Disco choice is the have great work.
+                  section.main-post--read-more
+                    p Read more
+                .main-post--comments
+                  span.main-post--info.main-post--info_regular
+                    i(class="fa fa-comments-o" aria-hidden="true")
+                    | No Comment
+                  ul
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-dribbble" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-facebook" aria-hidden="true")
+                    li.main-post--social
+                      a(href="#")
+                        i(class="fa fa-twitter" aria-hidden="true")
+                    li.main-post--social.main-post--social__last
+                      a(href="#")
+                        i(class="fa fa-pinterest" aria-hidden="true")
+
+              article.main-post.main-post-player
+                .main-post--wrapper
+                  section.main-post--header
+                    p.main-post--info Audio Music 
+                    p.main-post--name Best Audio Player Post
+                    p.main-post--info.main-post--info_regular December 29, 2015
+                  section.main-post--main
+                    img(src="img/main/player.png" alt="player")
+
+    footer.footer
+      .content
+        .content--wrapper.footer--wrapper
+          section.footer-block
+            h4 About Blog
+            p.footer-block--info Lorem ipsum dolor sit amet, conser adipisicing  esse cillum dolore nulla pariatur. 
+            img(src="img/footer/signature.png" alt="signature")
+          section.footer-block
+            h4 Latest Tweets
+            ul.footer-block--lists
+              each val in [1,2]
+                li.footer-block--tweet
+                  span
+                    i(class="fa fa-twitter")
+                  .footer-block--tweet-text
+                    p.footer-block--tweet-name @Twitter@magicalrebekah
+                    p.footer-block--info Developer Advocate @heyval isaiyou knows the very well is about things .
+          section.footer-block
+            h4.footer-block--name Follow me instagram
+            ul.footer-block--lists.footer-block--lists__insta
+              each val in [1,2,3,4,5,6]
+                li
+                  img(src="img/footer/inst.png" alt="inst")
+          section.footer-block
+            h4.footer-block--name Latest Comment
+            ul.footer-block--lists.footer-block--lists__comment
+              each val in [1,2]
+                li
+                  p.footer-block--comment.footer-block--comment__name From Alex :
+                  p.footer-block--comment Developer Advocate @heyval isaiyou know the very well is talking about things .
+      .footer-copy
+        .content.content-footer
+          p @2015 copyright .all right reserved by awesome theme   i   terms policy   i   disclaimer

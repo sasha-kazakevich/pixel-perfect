@@ -1,0 +1,128 @@
+.header
+  width 100%
+  height 346px
+  background-color #212429
+  margin-bottom 288px
+
+.header-top-line
+  display flex
+  justify-content space-between
+  align-items center
+  background-color #212429
+
+  &--icon
+    display inline-block
+    border 1px solid #3c3c3c
+    margin 0
+    font-size 16px
+    border-width 0 1px 0 0
+    transition all .1s ease-in-out
+    &:hover
+      a
+        color #999999
+
+    a
+      display block
+      padding 22px 20px 15px
+      color #fff
+
+  &--icon__menu
+    border 1px solid #3c3c3c
+    border-width 0 1px
+    a
+      padding 22px 21px 15px
+
+  &--icon__rss
+    border 1px solid #3c3c3c
+    border-width 0 1px
+    a
+      padding 22px 22px 15px
+
+  &--logo
+    position relative
+    left 138px
+    top 3px
+    color #fff
+
+    span
+      text-transform uppercase
+      font-family 'Hind-Semibold'
+      margin-left 7px
+      font-size 22px
+      letter-spacing 4.6px
+      line-height 30px
+
+
+.header-slider
+  position relative
+
+  &--slide
+    position relative
+
+  &--slide-text
+    position absolute
+    margin auto
+    top 226px
+    left 98px
+    color #fff
+
+    p
+      font-family 'Hind-Semibold'
+      font-size 18px
+      line-height 24px
+      letter-spacing 3.5px
+      margin-bottom 14px
+
+    h2
+      font-family 'Hind-Bold'
+      font-size 40px
+      text-transform uppercase
+      line-height 50px
+      letter-spacing 5.5px
+
+.header-navigation
+  position absolute
+  right -51px
+  bottom 268px
+  margin auto
+  transform rotate(-90deg);
+
+  &--points
+    text-align center
+    margin-bottom 13px
+
+  &--point
+    width 8px
+    height 8px
+    display inline-block
+    border 1px solid #fff
+    margin 0 5px
+
+  &--point__active
+    background-color #999
+
+  &--text
+    font-family 'Hind-Semibold'
+    text-transform uppercase
+    letter-spacing 2.8px
+    line-height 24px
+    color #fff
+
+    &:before,
+    &:after
+      width 10px
+      height 10px
+      font-size 24px
+      position relative
+      top 3px
+      color #fff
+      cursor pointer
+
+    &:before
+      content '⟵'
+      right 14px
+
+
+    &:after
+      content '⟶'
+      left 14px

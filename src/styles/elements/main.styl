@@ -1,0 +1,309 @@
+.main
+  width 100%
+  min-height calc(100vh - 412px)
+  background-color #f9f9fb
+  margin-bottom 26px
+
+  &--wrapper
+    width 1530px
+    margin 0 auto
+
+.main-form
+  display flex
+  align-items center
+  justify-content space-between
+  background-color #f7f7f7
+  margin-bottom 79px
+  padding 25px 30px 20px
+
+  h3
+    font-size 20px
+    font-family "Montserrat"
+    text-transform uppercase
+    line-height 1.4
+    letter-spacing 4px
+
+  input
+    width 425px
+    padding 16px 28px
+    border none
+    outline none
+    font-size 16px
+
+    &::-webkit-input-placeholder
+      font-family 'Hind-Light'
+      font-size 15px
+      text-transform uppercase
+      line-height 1.867
+      letter-spacing 1.1px
+
+    &::-moz-placeholder
+      font-family 'Hind-Light'
+      font-size 15px
+      text-transform uppercase
+      line-height 1.867
+      letter-spacing 1.1px
+
+    &:-ms-input-placeholder
+      font-family 'Hind-Light'
+      font-size 15px
+      text-transform uppercase
+      line-height 1.867
+      letter-spacing 1.1px
+
+    &:-moz-placeholder
+      font-family 'Hind-Light'
+      font-size 15px
+      text-transform uppercase
+      line-height 1.867
+      letter-spacing 1.1px
+
+  button
+    font-family 'Hind-Medium'
+    color #fff
+    background-color #212121
+    border none
+    text-transform uppercase
+    line-height 33px
+    letter-spacing 2.9px
+    padding 8px 70px
+
+    &:hover
+      cursor pointer
+      background-color #373535
+
+.main-content
+  display flex
+  justify-content space-between
+
+  &--column
+    width 357px
+
+.main-post
+  background-color #fff
+  text-align center
+  font-family 'Hind-Regular'
+  margin-bottom 30px
+  position relative
+  transition all .1s ease-in-out
+
+  &:hover
+    box-shadow 0 0 20px rgba(0, 0, 0, 0.5)
+    cursor pointer
+
+  &:before
+    position absolute
+    left 0
+    right 0
+    margin auto
+    top -18px
+    width 40px
+    padding 10px 0px
+    display inline-block
+
+    background-color #000
+    font-family 'FontAwesome'
+    content '\f040'
+    color #fff
+
+  &--image
+    img
+      width 100%
+
+  &--wrapper
+    padding 50px 30px 0
+    position relative
+
+  &--wrapper__background
+    padding 37px 30px 0
+
+  &--wrapper__image
+    padding 46px 30px 0
+
+  &--wrapper__video
+    padding 28px 30px 0
+
+  &--wrapper-before
+    &:before
+      position absolute
+      left 0
+      right 0
+      margin auto
+      top -20px
+      width 40px
+      padding 10px 0px
+      display inline-block
+
+      background-color #000
+      font-family 'FontAwesome'
+      content '\f03e'
+      color #fff
+
+  &--header
+    margin-bottom 15px
+
+  &--info
+    text-transform uppercase
+    color #999999
+    line-height 24px
+    letter-spacing 1px
+
+  &--info_regular
+    font-family 'Hind-Regular'
+    i
+      margin-right 12px
+
+  &--name
+    font-family 'Montserrat-Bold'
+    font-size 20px
+    padding 8px 0
+    text-transform uppercase
+    letter-spacing 1px
+
+  &--main
+    margin-bottom -1px
+    p
+      font-size 15px
+      text-align center
+      letter-spacing 1.2px
+      line-height 28px
+
+    a
+      display inline-block
+      color #fff
+      font-size 17px
+      letter-spacing 1.4px
+      line-height 28px
+      padding 59px 0
+
+    img
+      margin-bottom 150px
+
+  &--main__quote
+    p
+      font-size 17px
+      letter-spacing 1.6px
+
+  &--main__video
+    padding-bottom 31px
+
+  &--read-more
+    margin 34px 0 41px
+    transition all .1s ease-in-out
+    p
+      text-transform uppercase
+      display inline-block
+      padding 5px 0
+      border 1px solid #d7d7d7
+      border-top 1px solid transparent
+      border-bottom 1px solid transparent
+      width 128px
+      margin 0 auto
+      letter-spacing 3px
+    &:hover
+      p
+        border 1px solid #d7d7d7
+        border-width 1px 0
+
+  &--read-more__signature
+    margin 0
+    padding 26px 0 29px
+    &:hover
+      p
+        border none
+    p
+      border none
+      letter-spacing 1px
+
+
+  &--comments
+    padding 21px 30px 14px
+    border-top 1px solid #f7f7f7
+    display flex
+    justify-content space-between
+
+    i
+      color #000
+
+  &--social
+    display inline-block
+    font-size 14px
+    margin 0 12px
+    &:hover
+      i
+       color #999999
+
+  &--social__last
+    margin 0
+
+
+.main-post__decor
+  margin-bottom 49px
+
+/*
+ * decor posts
+ */
+
+.main-post-white
+  height 510px
+  &:before
+    display none
+
+.main-post-background
+  overflow hidden
+  background url('../img/main/bg-post.png') center center
+  &:before
+    display none
+
+.main-post-image
+    margin-bottom 47px
+    &:before
+      display none
+
+.main-post-quote
+  background-color #212429
+  color #fff
+  position relative
+  margin-bottom 48px
+
+  &:before
+    position absolute
+    left 0
+    right 0
+    margin auto
+    top -20px
+    width 40px
+    padding 10px 0px
+    display inline-block
+
+    background-color #fff
+    font-family 'FontAwesome'
+    content '\f10d'
+    color #000
+
+.main-post-video
+  &:before
+    content '\f008'
+    color #fff
+    background-color #000
+
+.main-post-link
+  background-color #212429
+  color #fff
+  margin-bottom 49px
+  &:before
+    content '\f0c1'
+    background-color #fff
+    color #000
+
+.main-post-black
+  height 287px
+  background-color #212429
+  &:before
+    content '\f009'
+    background-color #fff
+    color #000
+
+.main-post-player
+  &:before
+    content '\f001'
